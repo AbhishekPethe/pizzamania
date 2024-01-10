@@ -1,7 +1,8 @@
-import { Inter } from 'next/font/google'
+import { Salsa , Oleo_Script} from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+export const salsa = Salsa({ subsets: ['latin'] , weight: '400' })
+export const oleo_script = Oleo_Script({subsets : ['latin'] , weight: ['400', '700'],} , )
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={salsa.className}>{children}</body>
     </html>
   )
 }
