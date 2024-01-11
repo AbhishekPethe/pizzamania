@@ -1,5 +1,6 @@
 import React from 'react'
 import SectionHeading from './SectionHeading'
+import Image from 'next/image'
 
 
 const menu = [
@@ -47,9 +48,17 @@ const menu = [
 
 const Menu = () => {
   return (
-      <div className='flex flex-col gap-5'>
+      <div className='relative mt-10 md:mt-20 lg:mt-32 flex flex-col gap-5'>
           <SectionHeading text="order best pizza" />
-          <div className='mx-3 md:mx-20 grid grid-col-1 gap-3 lg:grid-cols-2 lg:gap-x-24 '>
+          <Image
+              src={"/arrow-1.webp"}
+              alt='arrow'
+              width={50}
+              height={50}
+              className='absolute right-52 -top-10 max-[500px]:hidden'
+
+          /> 
+          <div className='mx-3 md:mx-20 md:mt-10 grid grid-col-1 gap-3 lg:grid-cols-2 lg:gap-x-24 '>
               {
                   menu.map((each , i) => {
                       return (
@@ -65,6 +74,25 @@ const Menu = () => {
                   })
               }
           </div>
+
+          <div className='mt-5 lg:mt-10 md:mx-20 lg:mx-32 flex flex-row justify-between items-center   '>
+              <Image
+                  src="/slice.webp"
+                  alt='slice'
+                  width={150}
+                  height={150}
+                  className='max-[500px]:w-[90px]'
+              />
+              <button className='button py-4'>order now</button>
+              <Image
+                  src="/whole-pizza.webp"
+                  alt='slice'
+                  width={170}
+                  height={170}
+                  className='max-[500px]:w-[90px]'
+              />
+          </div>
+
       </div>
   )
 }

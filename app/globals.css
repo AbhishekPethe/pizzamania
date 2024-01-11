@@ -4,7 +4,7 @@
 
 @layer components{
   .button{
-    @apply  border-black border-2 rounded-3xl bg-[#D63920] px-10 py-2 uppercase hover:bg-white hover:text-black ease-linear duration-200
+    @apply text-white hover:border-black border-2 rounded-3xl bg-[#D63920] px-10 py-2 uppercase hover:bg-white hover:text-black ease-linear duration-200
   }
 }
 
